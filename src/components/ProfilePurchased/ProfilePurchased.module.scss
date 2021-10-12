@@ -1,0 +1,24 @@
+@import 'styles/typography.scss';
+@import 'styles/helpers.scss';
+@import 'styles/media.scss';
+
+.root {
+  display: block;
+}
+
+.galleryLink {
+  @extend ._link;
+  align-items: center;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: center;
+  position: relative;
+  width: calc((100vW - 48px - 16px) /2);
+
+  @include desktop {
+    height: 406px;
+    width: 256px;
+  }
+}

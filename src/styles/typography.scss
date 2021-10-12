@@ -1,0 +1,408 @@
+@import './variables';
+
+@mixin display {
+  font-family: var(--font-secondary);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100px;
+  text-transform: capitalize;
+}
+
+@mixin heading-1 {
+  font-family: var(--font-secondary);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80px;
+  text-transform: capitalize;
+}
+
+@mixin heading-2 {
+  font-family: var(--font-secondary);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 72px;
+  text-transform: capitalize;
+}
+
+@mixin heading-3 {
+  font-family: var(--font-primary);
+  font-size: 34px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 44px;
+  text-transform: capitalize;
+}
+
+@mixin heading-4 {
+  font-family: var(--font-primary);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  text-transform: capitalize;
+}
+
+@mixin heading-5 {
+  font-family: var(--font-primary);
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 38px;
+  text-transform: capitalize;
+}
+
+@mixin subheading-2 {
+  font-family: var(--font-primary);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+@mixin subheading-3 {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+@mixin title-1 {
+  font-family: var(--font-primary);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+@mixin title-2 {
+  font-family: var(--font-primary);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+@mixin title-3 {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+@mixin title-4 {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+@mixin title-5 {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+@mixin title-6 {
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+@mixin paragraph-1 {
+  font-family: var(--font-primary);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+@mixin paragraph-2 {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+@mixin tagline-1 {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+@mixin tagline-2 {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+@mixin tagline-3 {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+@mixin tagline-5 {
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+@mixin body-1 {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+@mixin body-2 {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+@mixin body-3 {
+  font-family: var(--font-primary);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28px;
+}
+
+@mixin caption-1 {
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+@mixin caption-2 {
+  font-family: var(--font-primary);
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+}
+
+@mixin button {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+@mixin logo-1 {
+  font-family: var(--font-secondary);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 31px;
+  text-transform: uppercase;
+}
+
+@mixin logo-2 {
+  font-family: var(--font-primary);
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16.5px;
+  text-transform: capitalize;
+}
+
+@mixin logo-big-1 {
+  font-family: var(--font-secondary);
+  font-size: 49px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px;
+  text-transform: capitalize;
+}
+
+@mixin logo-big-2 {
+  font-family: var(--font-secondary);
+  font-size: 29px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 38px;
+  text-transform: capitalize;
+}
+
+@mixin landing-header-mobile {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 42px;
+  text-transform: uppercase;
+}
+
+@mixin landing-header-desktop {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+}
+
+@mixin landing-subheader {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 47px;
+}
+
+.display {
+  @include display;
+}
+
+.heading-1 {
+  @include heading-1;
+}
+
+.heading-2 {
+  @include heading-2;
+}
+
+.heading-3 {
+  @include heading-3;
+}
+
+.heading-4 {
+  @include heading-4;
+}
+
+.heading-5 {
+  @include heading-5;
+}
+
+.subheading-2 {
+  @include subheading-2;
+}
+
+.subheading-3 {
+  @include subheading-3;
+}
+
+.title-1 {
+  @include title-1;
+}
+
+.title-2 {
+  @include title-2;
+}
+
+.title-3 {
+  @include title-3;
+}
+
+.title-4 {
+  @include title-4;
+}
+
+.title-5 {
+  @include title-5;
+}
+
+.title-6 {
+  @include title-6;
+}
+
+.paragraph-1 {
+  @include paragraph-1;
+}
+
+.paragraph-2 {
+  @include paragraph-2;
+}
+
+.tagline-1 {
+  @include tagline-1;
+}
+
+.tagline-2 {
+  @include tagline-2;
+}
+
+.tagline-3 {
+  @include tagline-3;
+}
+
+.tagline-5 {
+  @include tagline-5;
+}
+
+.body-1 {
+  @include body-1;
+}
+
+.body-2 {
+  @include body-2;
+}
+
+.body-3 {
+  @include body-3;
+}
+
+.caption-1 {
+  @include caption-1;
+}
+
+.caption-2 {
+  @include caption-2;
+}
+
+.button {
+  @include button;
+}
+
+.logo-1 {
+  @include logo-1;
+}
+
+.logo-2 {
+  @include logo-2;
+}
+
+.logo-big-1 {
+  @include logo-big-1;
+}
+
+.logo-2 {
+  @include logo-big-2;
+}
+
+.landing-header-mobile {
+  @include landing-header-mobile;
+}
+
+.landing-subheader {
+  @include landing-subheader;
+}

@@ -1,0 +1,36 @@
+@import 'styles/typography.scss';
+@import 'styles/helpers.scss';
+
+.root {
+  @extend ._button;
+  align-items: center;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px var(--color-grey-50);
+  color: var(--color-white);
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  padding: 4px 16px;
+
+  @include desktop {
+    &:hover {
+      border-width: 2px;
+      box-shadow: 0 0 0 2px var(--color-grey-50);
+      background-color: var(--color-grey-80);
+    }
+  }
+
+  span {
+    @extend .body-2;
+  }
+
+  &.active {
+    background-color: var(--color-teal-d-20);
+    box-shadow: 0 0 0 1px var(--color-primary-teal);
+
+    &:hover {
+      background-color: var(--color-teal-d-40);
+      box-shadow: 0 0 0 2px var(--color-primary-teal);
+    }
+  }
+}

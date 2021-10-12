@@ -1,0 +1,87 @@
+@import 'styles/typography.scss';
+@import 'styles/helpers.scss';
+@import 'styles/media.scss';
+
+.root {
+  display: block;
+  position: relative;
+}
+
+.mobileButton {
+  @extend ._button;
+
+  @extend .desktopHide;
+  align-items: center;
+  background-color: var(--color-primary-teal);
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: var(--color-white);
+  display: flex;
+  height: 48px;
+  justify-content: center;
+  width: 48px;
+
+  &:focus {
+    background-color: var(--color-pink-80);
+  }
+
+  &.connected {
+    background-color: var(--color-white);
+    border: solid 1px var(--color-teal-60);
+  }
+}
+
+.desktopButton {
+  @extend .mobileHide;
+  @include truncate;
+  width: 192px;
+}
+
+.ddWrapper {
+  background-color: var(--color-grey-90);
+  border-radius: 2px;
+  bottom: -8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  transform: translate(0, 100%);
+  width: 192px;
+  z-index: 2;
+  
+  @include desktop {
+    bottom: -12px;
+  }
+}
+
+.ddLink {
+  @extend ._link;
+  @extend .body-2;
+  margin: 16px 0;
+  padding: 6px 24px;
+  width: 100%;
+  
+  &:hover {
+    background-color: var(--color-grey-80);
+  }
+}
+
+.ddButton {
+  @extend ._button;
+  @extend .body-2;
+  color: var(--color-red-60);
+  margin: 16px 0;
+  padding: 6px 24px;
+  width: 100%;
+  
+  &:hover {
+    background-color: var(--color-red-100);
+  }
+}
+
+.ddBorder {
+  background-color: var(--color-grey-70);
+  height: 1px;
+  width: 100%;
+}

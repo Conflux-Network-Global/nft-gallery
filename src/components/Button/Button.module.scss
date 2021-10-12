@@ -1,0 +1,163 @@
+@import 'styles/typography.scss';
+
+.root {
+  --color-main: transparent;
+  --color-hover-focus: transparent;
+  --color-active: transparent;
+
+  --button-border-color: transparent;
+  --button-border-width: 0;
+  --button-bg: transparent;
+  --button-color: var(--color-black);
+
+  --button-hover-focus-border: transparent;
+  --button-hover-focus-border-width: 0;
+  --button-hover-focus-color: transparent;
+  --button-hover-focus-bg: transparent;
+
+  --button-active-border: transparent;
+  --button-active-border-width: 0;
+  --button-active-color: transparent;
+  --button-active-bg: transparent;
+
+  --button-disable-border: transparent;
+  --button-disable-border-width: 0;
+  --button-disable-color: transparent;
+  --button-disable-bg: transparent;
+
+  --button-margin: 0;
+  @extend .button;
+  align-items: center;
+  background-color: var(--button-bg);
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 0 0 var(--button-border-width) var(--button-border-color);
+  color: var(--button-color);
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  margin: var(--button-margin);
+  outline: none;
+  padding: 0 24px;
+
+  &:hover {
+    background-color: var(--button-hover-focus-bg);
+    box-shadow: 0 0 0 var(--button-hover-focus-border-width)
+      var(--button-hover-focus-border);
+    color: var(--button-hover-focus-color);
+  }
+
+  &:active {
+    background-color: var(--button-active-bg);
+    box-shadow: 0 0 0 var(--button-active-border-width)
+      var(--button-active-border);
+    color: var(--button-active-color);
+  }
+
+  &.disabled {
+    background-color: var(--button-disable-bg);
+    box-shadow: 0 0 0 var(--button-disable-border-width)
+      var(--button-disable-border);
+    color: var(--button-disable-color);
+    cursor: not-allowed;
+  }
+}
+
+.color {
+  &_primary {
+    --color-main: var(--color-primary-teal);
+    --color-hover-focus: var(--color-teal-40);
+    --color-active: var(--color-teal-70);
+    --color-active-secondary: var(--color-teal-70);
+    --color-text-active: var(--color-black);
+    --color-text-active-secondary: var(--color-black);
+  }
+
+  &_warning {
+    --color-main: var(--color-red-60);
+    --color-hover-focus: var(--color-red-20);
+    --color-active: var(--color-red-10);
+    --color-active-secondary: var(--color-red-70);
+    --color-text-active: var(--color-red-60);
+    --color-text-active-secondary: var(--color-black);
+  }
+}
+
+.primary {
+  --button-bg: var(--color-main);
+  --button-color: var(--color-white);
+
+  --button-hover-focus-bg: var(--color-hover-focus);
+  --button-hover-focus-color: var(--color-text-active);
+
+  --button-active-bg: var(--color-active);
+  --button-active-color: var(--color-text-active);
+
+  --button-disable-bg: var(--color-grey-20);
+  --button-disable-color: var(--color-grey-60);
+}
+
+.secondary {
+  --button-border-color: var(--color-main);
+  --button-border-width: 1px;
+  --button-color: var(--color-main);
+
+  --button-hover-focus-border: var(--color-main);
+  --button-hover-focus-border-width: 2px;
+  --button-hover-focus-color: var(--color-text-active-secondary);
+  --button-hover-focus-bg: var(--color-main);
+
+  --button-active-bg: var(--color-active-secondary);
+  --button-active-border: var(--button-active-bg);
+  --button-active-border-width: 2px;
+  --button-active-color: var(--color-text-active-secondary);
+
+  --button-disable-border: var(--color-grey-20);
+  --button-disable-border-width: 1px;
+  --button-disable-color: var(--color-grey-20);
+  --button-margin: 1px;
+}
+
+.tertiary {
+  --button-bg: var(--color-grey-10);
+  --button-color: var(--color-main);
+  --color-text-active: var(--color-black);
+
+  --button-hover-focus-bg: var(--color-teal-20);
+  --button-hover-focus-color: var(--color-black);
+
+  --button-active-bg: var(--color-teal-10);
+  --button-active-color: var(--color-black);
+
+  --button-disable-bg: var(--color-grey-20);
+  --button-disable-color: var(--color-grey-60);
+}
+
+.full {
+  width: 100%;
+}
+
+.small {
+  height: 36px;
+}
+
+.medium {
+  height: 40px;
+}
+
+.large {
+  height: 48px;
+}
+
+.leftElement {
+  align-items: center;
+  display: flex;
+  margin-right: 8px;
+}
+
+.rightElement {
+  align-items: center;
+  display: flex;
+  margin-left: 8px;
+}

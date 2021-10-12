@@ -1,0 +1,15 @@
+@import 'styles/typography.scss';
+
+.root {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.chip {
+  margin: 6px 8px 6px 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

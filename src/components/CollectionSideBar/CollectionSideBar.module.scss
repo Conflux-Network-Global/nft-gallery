@@ -1,0 +1,133 @@
+@import 'styles/typography.scss';
+@import 'styles/helpers.scss';
+@import 'styles/media.scss';
+
+.root {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    flex: 0 0 208px;
+    margin-right: 80px;
+  }
+}
+
+.navItem {
+  @extend ._button;
+  @extend .title-4;
+  color: var(--color-grey-50);
+  margin-bottom: 16px;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    color: var(--color-teal-60);
+  }
+}
+
+.navItemActive {
+  color: var(--color-primary-teal);
+  pointer-events: none;
+}
+
+.markets {
+  display: flex;
+  flex-direction: column;
+}
+
+.marketsWrapper {
+  display: flex;
+  width: 100%;
+  margin-top: 24px;
+
+  @include desktop {
+    flex-direction: column;
+    margin-top: 0;
+  }
+}
+
+.marketButton {
+  @include title-4;
+  color: var(--color-grey-40);
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  padding: 0;
+  background: none;
+  border: 0;
+  text-align: left;
+
+  &:first-child {
+    margin-right: 16px;
+  }
+
+  &.active {
+    pointer-events: none;
+    color: var(--color-primary-teal);
+  }
+
+  &:hover:not(.active) {
+    color: var(--color-teal-60);
+  }
+
+  @include desktop {
+    &:first-child {
+      margin: 24px 0 16px 0;
+    }
+  }
+}
+
+.collections {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    margin-top: 52px;
+  }
+}
+
+.sectionHeader {
+  @include tagline-5;
+  color: var(--color-white);
+}
+
+.collectionHeader {
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}
+
+.currentMarket {
+  @include caption-2;
+  color: var(--color-primary-teal);
+  text-transform: none;
+  margin-left: 3px;
+}
+
+.search {
+  display: none;
+
+  @include desktop {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 24px;
+  }
+}
+
+.searchIcon {
+  color: var(--color-grey-50);
+}
+
+.collectionControls {
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}

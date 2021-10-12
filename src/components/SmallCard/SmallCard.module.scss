@@ -1,0 +1,183 @@
+@use 'sass:math';
+@import 'styles/typography.scss';
+@import 'styles/helpers.scss';
+@import 'styles/media.scss';
+
+.root {
+  align-items: center;
+  border: solid 1px var(--color-grey-10);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  position: relative;
+}
+
+.toolTip {
+  height: 24px;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 24px;
+  z-index: 2;
+}
+
+.quantity {
+  @extend .caption-2;
+  align-items: center;
+  background-color: var(--color-pink-10);
+  border-radius: 50%;
+  cursor: default;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  width: 24px;
+}
+
+.tooltipText {
+  @extend .caption-1;
+  color: var(--color-white);
+  text-align: center;
+  //display: flex;
+  width: 120px;
+}
+
+.imageWrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 16px;
+  overflow: hidden;
+  position: relative;
+  width: calc(100% - 32px);
+
+  &::after {
+    content: '';
+    display: block;
+    // to save ratio
+    padding-top: math.div(168px, 176px) * 100%;
+  }
+
+  img {
+    left: 50%;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.title {
+  @extend .title-3;
+  @include truncate;
+  text-align: center;
+
+  @include desktop {
+    @include title-3;
+  }
+}
+
+.collectionName {
+  @extend .caption-2;
+  color: var(--color-grey-50);
+  text-align: center;
+}
+
+.titleWrapper {
+  max-width: 100%;
+  min-width: 0;
+  padding: 0 24px;
+}
+
+.detailWrapper {
+  background-color: var(--color-grey-10);
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  padding: 24px;
+  width: 100%;
+}
+
+.actionWrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.priceWrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @include desktop {
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+
+    &.fullWidth {
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+}
+
+.ethText {
+  @extend .title-3;
+}
+
+.usdText {
+  @extend .caption-2;
+  color: var(--color-grey-50);
+}
+
+.button {
+  margin-top: 8px;
+  position: relative;
+  z-index: 2;
+
+  @include desktop {
+    margin: 0 auto;
+    margin-top: 0;
+    min-width: 99px;
+  }
+}
+
+.openseaLink {
+  @extend ._link;
+  @extend .caption-2;
+  align-items: center;
+  color: var(--color-grey-50);
+  display: flex;
+  flex-direction: row;
+  margin-top: 8px;
+  position: relative;
+  z-index: 2;
+
+  @include desktop {
+    margin-top: 16px;
+  }
+}
+
+.linkIcon {
+  margin-right: 4px;
+}
+
+.link {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}

@@ -1,0 +1,39 @@
+@import-normalize;
+@import './fonts.scss';
+@import './variables.scss';
+@import './typography.scss';
+@import './helpers.scss';
+
+html,
+body {
+  @include body-1;
+  background-color: var(--color-grey-100);
+  color: var(--color-white);
+  min-width: 320px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+

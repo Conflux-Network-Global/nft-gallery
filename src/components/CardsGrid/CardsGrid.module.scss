@@ -1,0 +1,119 @@
+@import 'styles/typography.scss';
+@import 'styles/helpers.scss';
+@import 'styles/media.scss';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.collectionSelect {
+  @extend .desktopHide;
+  width: 100%;
+}
+
+.search {
+  @extend .desktopHide;
+  margin-bottom: 24px;
+}
+
+.searchIcon {
+  color: var(--color-grey-50);
+}
+
+.items {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 45px;
+  justify-items: center;
+
+  @include tablet-portrait {
+    gap: 32px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(3, 256px);
+  }
+}
+
+.sorting {
+  margin-top: 24px;
+
+  @include desktop {
+    margin-top: 0;
+    width: 208px;
+  }
+}
+
+.titleWrapper {
+  display: flex;
+}
+
+.cardsAmount {
+  @include title-3;
+  color: var(--color-grey-50);
+  margin-left: 4px;
+}
+
+.title {
+  @extend .title-2;
+
+  @include desktop {
+    @include title-1;
+  }
+}
+
+.sidebar {
+  margin-bottom: 44px;
+
+  @include desktop {
+    margin-bottom: 0;
+  }
+}
+
+.content {
+  flex: 1 1 auto;
+  margin-top: 32px;
+
+  @include desktop {
+    margin-top: 0;
+  }
+}
+
+.progressBar {
+  margin-bottom: 87px;
+
+  @include desktop {
+    margin-bottom: 64px;
+  }
+
+  &.desktop {
+    display: none;
+
+    @include desktop {
+      display: block;
+    }
+  }
+
+  &.mobile {
+    @include desktop {
+      display: none;
+    }
+  }
+}

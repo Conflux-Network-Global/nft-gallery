@@ -1,0 +1,37 @@
+@import 'styles/typography.scss';
+@import 'styles/media.scss';
+
+.root {
+  display: block;
+}
+
+.container {
+  padding-bottom: 64px;
+  padding-top: 40px;
+
+  @include desktop {
+    padding-bottom: 120px;
+    padding-top: 64px;
+  }
+}
+
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+
+  @include desktop {
+    flex: 1;
+    margin: 0 0 0 32px;
+  }
+}

@@ -1,0 +1,245 @@
+@import 'styles/typography.scss';
+
+.root {
+  --input-color: var(--color-grey-100);
+  --input-border-color: var(--color-grey-30);
+  --input-border-width: 1px;
+  --input-height: 56px;
+  --label-position-y: 21px;
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  @extend .body-1;
+  background-color: transparent;
+  border: none;
+  color: var(--input-color);
+  flex: 1;
+  height: var(--input-height);
+  outline: none;
+  overflow: hidden;
+  padding: 0 16px;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+}
+
+.input.textarea {
+  @extend .body-2;
+  height: 176px;
+  padding: 16px;
+  resize: none;
+  overflow: auto;
+}
+
+.input::placeholder {
+  color: var(--color-grey-70);
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  position: relative;
+  width: 100%;
+
+  &:not(.withError):not(.disabled):not(.errorHighlight):not(.dark):hover {
+    --input-border-color: var(--color-grey-100);
+    --input-border-width: 2px;
+  }
+
+  &:not(.withError):not(.disabled):not(.errorHighlight).dark:hover {
+    --input-border-color: var(--color-grey-10);
+    --input-border-width: 2px;
+  }
+}
+
+.inputContainer {
+  border-radius: 2px;
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.inputWrap {
+  align-items: center;
+  display: flex;
+  flex: 1;
+}
+
+.leftElement {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 12px;
+}
+
+.rightElement {
+  align-items: center;
+  display: flex;
+  margin-left: 4px;
+  margin-right: 17px;
+}
+
+.border {
+  border-color: var(--input-border-color);
+  border-radius: inherit;
+  border-style: solid;
+  border-width: var(--input-border-width);
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  padding-left: 12px;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: -6px;
+  z-index: 0;
+}
+
+.legend {
+  display: block;
+  height: 12px;
+  max-width: 0;
+  padding: 0;
+  text-align: left;
+  visibility: hidden;
+}
+
+.legend span {
+  @extend .caption-2;
+  display: block;
+  line-height: 12px;
+  padding: 0 4px;
+}
+
+.label {
+  @extend .body-2;
+  color: var(--input-border-color);
+  left: 0;
+  line-height: 1;
+  position: absolute;
+  top: 0;
+  transform: translateX(16px) translateY(var(--label-position-y));
+  transform-origin: top left;
+  transition: color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
+    font-size 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
+    transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.optional {
+  color: var(--color-red-60);
+  margin-left: 5px;
+}
+
+.error {
+  @extend .caption-2;
+  align-items: center;
+  color: var(--color-red-60);
+  display: flex;
+  left: 0;
+  margin: 8px 0 0;
+  position: absolute;
+  top: 100%;
+}
+
+.errorIcon {
+  align-self: flex-start;
+  color: var(--color-error);
+  display: block;
+  margin-right: 5px;
+}
+
+.withError {
+  --input-border-color: var(--color-error);
+  --input-border-width: 2px;
+}
+
+.errorHighlight {
+  --input-border-color: var(--color-red-60);
+  --input-border-width: 2px;
+}
+
+.disabled {
+  --input-border-color: var(--color-grey-30);
+  --input-color: var(--color-grey-50);
+}
+
+.focus:not(.withError):not(.errorHighlight) {
+  --input-border-color: var(--color-primary-teal);
+  --input-border-width: 2px;
+}
+
+.withLeftElement {
+  padding-left: 30px;
+}
+
+.focus,
+.filled {
+  .label {
+    @extend .caption-2;
+    line-height: 1;
+    transform: translate(18px, -6px);
+  }
+
+  .withLeftElement {
+    transform: translate(-12px, -6px);
+  }
+
+  .legend {
+    max-width: 1000px;
+  }
+}
+
+.helperText {
+  @extend .caption-1;
+  color: var(--color-red-60);
+  left: 0;
+  margin-top: 8px;
+  position: absolute;
+  top: 100%;
+}
+
+.lg {
+  @extend .body-1;
+  --input-height: 56px;
+  --label-position-y: 21px;
+}
+
+.md {
+  @extend .body-2;
+  --input-height: 48px;
+  --label-position-y: 17px;
+}
+
+.sm {
+  @extend .body-2;
+  --input-height: 40px;
+  --label-position-y: 13px;
+}
+
+.xs {
+  @extend .caption-1;
+  --input-height: 36px;
+  --label-position-y: 13px;
+}
+
+.textArea:not(.withError):not(.errorHighlight) {
+  --input-border-color: var(--color-grey-70);
+
+  &.container {
+    &:not(.withError):not(.disabled):not(.errorHighlight):hover {
+      --input-border-color: var(--color-grey-50);
+      --input-border-width: 2px;
+    }
+  }
+}
+
+.dark {
+  --input-color: var(--color-white);
+}

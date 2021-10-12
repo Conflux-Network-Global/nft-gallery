@@ -1,0 +1,23 @@
+@import 'styles/typography.scss';
+
+.modal {
+  padding-bottom: 30px;
+  z-index: 999;
+  position: relative;
+}
+
+.root {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  @extend .title-2;
+  color: var(--color-grey-100);
+}
+
+.codWrapper {
+  height: 200px;
+  width: 200px;
+}
