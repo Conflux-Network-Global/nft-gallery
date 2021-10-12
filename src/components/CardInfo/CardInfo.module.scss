@@ -1,0 +1,70 @@
+@import 'styles/typography.scss';
+@import 'styles/helpers.scss';
+@import 'styles/media.scss';
+
+.root {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardNameWrapper {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.name {
+  @extend .title-2;
+
+  @include desktop {
+    @include title-1;
+  }
+}
+
+.remainCount {
+  @extend .title-3;
+  color: var(--color-grey-50);
+  margin-left: 4px;
+
+  @include desktop {
+    @include title-5;
+  }
+}
+
+.collectionName {
+  @extend .caption-1;
+  color: var(--color-grey-50);
+  margin-top: 2px;
+
+  @include desktop {
+    @include body-2;
+  }
+}
+
+.chipsWrapper {
+  align-items: center;
+  display: flex;
+  margin-top: 24px;
+  @include desktop {
+    margin-top: 0;
+  }
+
+  .chips {
+    margin-left: 8px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

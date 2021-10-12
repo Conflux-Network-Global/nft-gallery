@@ -1,0 +1,27 @@
+@import 'styles/typography.scss';
+@import 'styles/helpers.scss';
+
+.root {
+  @extend ._link;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 2px;
+  color: var(--color-primary-teal);
+  display: inline-flex;
+  padding: 6px 15px 6px 8px;
+  transition: all 0.3s;
+
+  span {
+    @extend .title-4;
+  }
+
+  &:hover {
+    text-shadow: 0 0 25px var(--color-primary-teal);
+    color: var(--color-teal-50);
+  }
+}
+
+.backIcon {
+  margin-right: 8px;
+  transform: rotate(90deg);
+}

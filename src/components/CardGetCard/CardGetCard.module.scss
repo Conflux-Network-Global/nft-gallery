@@ -1,0 +1,50 @@
+@use 'sass:math';
+@import 'styles/typography.scss';
+@import 'styles/helpers.scss';
+@import 'styles/media.scss';
+
+.root {
+  align-items: center;
+  background-color: var(--color-teal-d-10);
+  border: 4px dashed var(--color-primary-teal);
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 156px;
+  position: relative;
+  height: 300px;
+  justify-content: center;
+  align-content: center;
+  padding: 0 16px;
+  transition: background-color 0.3s;
+  user-select: none;
+  outline: none;
+
+  @include tablet-landscape {
+    width: 256px;
+    height: 406px;
+  }
+
+  &:hover {
+    background: var(--color-teal-d-20);
+  }
+}
+
+.icon {
+  color: var(--color-primary-teal);
+  height: 48px;
+  width: 48px;
+}
+
+.title {
+  @include title-4;
+  color: var(--color-white);
+  text-align: center;
+  margin-top: 12px;
+
+  @include tablet-landscape {
+    @include title-3;
+    margin-top: 22px;
+  }
+}

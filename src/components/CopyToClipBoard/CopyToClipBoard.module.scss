@@ -1,0 +1,24 @@
+@import 'styles/typography.scss';
+@import 'styles/helpers.scss';
+
+.root {
+  display: block;
+  position: relative;
+}
+
+.button {
+  @extend ._button;
+}
+
+.message {
+  @extend .caption-1;
+  background-color: rgba(4, 4, 6, 0.8);
+  border-radius: 8px;
+  bottom: -15px;
+  color: var(--color-white);
+  left: 50%;
+  padding: 8px 12px;
+  position: absolute;
+  transform: translate(-50%, 100%);
+  width: 155px;
+}

@@ -1,0 +1,18 @@
+@import 'styles/typography.scss';
+@import 'styles/helpers.scss';
+@import 'styles/media.scss';
+
+.root {
+  display: block;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 64px 0;
+  
+  @include desktop {
+    flex-direction: row;
+  }
+}

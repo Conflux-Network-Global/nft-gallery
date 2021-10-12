@@ -1,0 +1,54 @@
+@import 'typography';
+@import 'media';
+
+._link {
+  cursor: pointer;
+  color: var(--color-white);
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+._button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: calc(100% - 48px);
+
+  @media (min-width: 992px) {
+    width: calc(100% - 120px);
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1440px;
+    width: calc(100% - 320px);
+  }
+}

@@ -1,0 +1,147 @@
+@import 'styles/typography.scss';
+@import 'styles/helpers.scss';
+
+.root {
+  display: block;
+}
+
+.walletDetailWrapper {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+}
+
+.walletData {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-left: 16px;
+}
+
+.address {
+  @extend .title-2;
+}
+
+.buttonWrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin-top: 8px;
+}
+
+.copyAddress,
+.walletButton {
+  @extend ._button;
+  @extend .caption-2;
+  align-items: center;
+  color: var(--color-grey-50);
+  display: flex;
+  flex-direction: row;
+
+  @include desktop {
+    @include caption-1;
+  }
+
+  &:hover {
+    color: var(--color-primary-teal);
+  }
+}
+
+.buttonIcon {
+  margin-right: 4px;
+}
+
+.dot {
+  background-color: var(--color-primary-teal);
+  border-radius: 50%;
+  height: 4px;
+  margin: 0 8px;
+  width: 4px;
+}
+
+.title {
+  @extend .title-3;
+  margin-top: 64px;
+
+  @include desktop {
+    @include title-2;
+    margin-top: 96px;
+  }
+}
+
+.navWrapper {
+  border-bottom: solid 1px var(--color-grey-70);
+  margin-top: 16px;
+
+  @include desktop {
+    border-width: 2px;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.link {
+  @extend ._link;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  margin-right: 24px;
+  padding-bottom: 8px;
+
+  @include desktop {
+    &:hover:not(.disabled) {
+      box-shadow: 0 2px 0 0 var(--color-primary-teal);
+    }
+
+    &.active {
+      box-shadow: 0 2px 0 0 var(--color-primary-teal);
+    }
+  }
+
+  &.disabled {
+    color: var(--color-grey-50);
+    cursor: not-allowed;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.active {
+    box-shadow: 0 2px 0 0 var((--color-primary-teal));
+  }
+}
+
+.linkName {
+  @extend .body-2;
+  color: var(--color-white);
+
+  @include desktop {
+    @include body-1;
+  }
+}
+
+.count {
+  @extend .caption-2;
+  color: var(--color-grey-50);
+  margin-left: 4px;
+}
+
+.cardWrapper {
+  padding-bottom: 64px;
+  padding-top: 40px;
+
+  @include desktop {
+    padding-top: 48px;
+    padding-bottom: 160px;
+  }
+}
+
+.notification {
+  @include title-2;
+  text-align: center;
+  margin-top: 250px;
+}

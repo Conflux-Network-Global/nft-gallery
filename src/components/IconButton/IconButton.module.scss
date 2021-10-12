@@ -1,0 +1,103 @@
+.btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  margin: 0;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+.primary {
+  background: var(--color-primary-teal);
+
+  &:hover {
+    background: var(--color-teal-40);
+  }
+
+  &:active {
+    background: var(--color-teal-10);
+  }
+
+  .icon {
+    color: var(--color-white);
+  }
+
+  &:hover .icon,
+  &:active .icon {
+    color: var(--color-black);
+  }
+}
+
+.secondary {
+  background: transparent;
+  box-shadow: 0 0 0 1px var(--color-primary-teal);
+
+  &:hover {
+    background: var(--color-primary-teal);
+    box-shadow: 0 0 0 2px var(--color-primary-teal);
+  }
+
+  &:active {
+    background: var(--color-teal-d-30);
+    box-shadow: 0 0 0 2px var(--color-teal-d-30);
+  }
+
+  .icon {
+    color: var(--color-primary-teal);
+  }
+
+  &:hover .icon {
+    color: var(--color-black);
+  }
+
+  &:active .icon {
+    color: var(--color-white);
+  }
+}
+
+.disabled {
+  background: var(--color-grey-20);
+  cursor: not-allowed;
+
+  .icon {
+    color: var(--color-grey-60);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: var(--color-grey-20);
+  }
+
+  &:hover .icon,
+  &:focus .icon,
+  &:active .icon {
+    color: var(--color-grey-60);
+  }
+}
+
+.large {
+  padding: 12px;
+}
+
+.medium {
+  padding: 8px;
+}
+
+.small {
+  padding: 6px 8px;
+}
+
+.icon {
+  height: 24px;
+  width: 24px;
+}

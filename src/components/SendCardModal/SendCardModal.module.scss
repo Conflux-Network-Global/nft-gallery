@@ -1,0 +1,175 @@
+@import 'styles/typography.scss';
+@import 'styles/helpers.scss';
+@import 'styles/media.scss';
+
+.container {
+  color: var(--color-grey-100);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24px;
+  padding-top: 32px;
+  width: 100%;
+
+  @include desktop {
+    padding: 0;
+  }
+}
+
+.title {
+  @extend .title-2;
+}
+
+.topWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+.image {
+  align-items: center;
+  box-sizing: content-box;
+  display: flex;
+  border: 2px solid var(--color-grey-10);
+  border-radius: 2px;
+  max-width: 327px;
+  max-height: 327px;
+  justify-content: center;
+  object-fit: cover;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+
+  @include desktop {
+    width: 112px;
+    height: 112px;
+    margin: 0;
+  }
+}
+
+.namesWrapper {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+
+  @include desktop {
+    margin-left: 16px;
+    margin-top: 0;
+  }
+}
+
+.nameWrapper {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+}
+
+.cardName {
+  @extend .title-2;
+
+  @include desktop {
+    @include title-4;
+  }
+}
+
+.quantity {
+  @extend .title-3;
+  color: var(--color-grey-50);
+  margin-left: 4px;
+  @include desktop {
+    @include caption-1;
+  }
+}
+
+.collectionName {
+  @extend .caption-1;
+  color: var(--color-grey-50);
+  margin-top: 2px;
+  @include desktop {
+    margin-top: 4px;
+  }
+}
+
+.selectQuantityWrapper {
+  align-items: center;
+  background-color: var(--color-grey-10);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  padding: 32px;
+  width: 100%;
+
+  @include desktop {
+    margin-top: 16px;
+  }
+}
+
+.subtotal {
+  @extend .caption-1;
+  color: var(--color-grey-50);
+  margin-top: 24px;
+  text-align: center;
+}
+
+.priceWrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.eth {
+  @extend .paragraph-2;
+  font-weight: 500;
+}
+
+.usd {
+  @extend .caption-1;
+  color: var(--color-grey-50);
+  margin-left: 8px;
+  transform: translate(0, 2px);
+}
+
+.address {
+  margin-top: 24px;
+}
+
+.scanButton {
+  color: var(--color-grey-50);
+
+  &:hover,
+  &:active {
+    color: var(--color-primary-teal);
+  }
+}
+
+.sendButton {
+  margin-top: 24px;
+}
+
+.video {
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 2;
+
+  &.show {
+    display: block;
+  }
+}
+
+.closeVideo {
+  color: var(--color-white);
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 2;
+}

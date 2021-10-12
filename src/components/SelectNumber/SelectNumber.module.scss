@@ -1,0 +1,77 @@
+@import 'styles/typography.scss';
+@import 'styles/helpers.scss';
+
+.root {
+  align-items: center;
+  display: flex;
+}
+
+.dark {
+  .input {
+    background-color: transparent;
+    color: var(--color-white);
+  }
+
+  .countButton {
+    &:hover:not(.disabled) {
+      background-color: var(--color-primary-teal);
+      color: var(--color-black);
+    }
+
+    &.disabled {
+      background-color: transparent;
+      border-color: var(--color-grey-60);
+      border-width: 2px;
+      color: var(--color-grey-60);
+      cursor: not-allowed;
+    }
+  }
+}
+
+.countButton {
+  @extend ._button;
+  align-items: center;
+  border: solid 1px var(--color-primary-teal);
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: var(--color-primary-teal);
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  width: 30px;
+
+  &:hover:not(.disabled) {
+    background-color: var(--color-teal-20);
+  }
+
+  &.disabled {
+    background-color: var(--color-grey-20);
+    border-color: var(--color-grey-60);
+    border-width: 2px;
+    color: var(--color-grey-60);
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+.input {
+  @extend .title-3;
+  appearance: none;
+  border: solid 1px var(--color-grey-30);
+  border-radius: 2px;
+  height: 48px;
+  margin: 0 15px;
+  text-align: center;
+  width: 72px;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  &:focus {
+    outline-color: var(--color-teal-60);
+    //border-color: var(--color-pink-60);
+  }
+}

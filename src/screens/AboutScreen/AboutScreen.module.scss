@@ -1,0 +1,283 @@
+@import 'styles/typography.scss';
+@import 'styles/helpers.scss';
+@import 'styles/media.scss';
+
+.root {
+  display: block;
+  position: relative;
+}
+
+.effect {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.orange {
+  width: 200px;
+  height: 200px;
+  right: -140px;
+  bottom: -50px;
+  background: var(--color-additional-orange);
+  filter: blur(120px);
+
+  @include desktop {
+    width: 300px;
+    height: 300px;
+    right: -100px;
+    bottom: -15px;
+    filter: blur(150px);
+  }
+}
+
+.amberTop {
+  width: 400px;
+  height: 400px;
+  right: -250px;
+  top: 100px;
+  background: var(--color-additional-burgundy);
+  filter: blur(227.044px);
+  transform: rotate(60deg);
+
+  @include desktop {
+    right: -250px;
+    top: -40px;
+    filter: blur(160px);
+  }
+}
+
+.amberBottom {
+  height: 200px;
+  left: -130px;
+  top: 1150px;
+  background: var(--color-additional-burgundy);
+  filter: blur(110px);
+  width: 200px;
+
+  @include desktop {
+    height: 300px;
+    width: 300px;
+    filter: blur(160px);
+    left: -50px;
+    top: 850px;
+  }
+}
+
+.tealTop {
+  width: 400px;
+  height: 400px;
+  left: -250px;
+  top: 207px;
+  background: var(--color-primary-teal);
+  filter: blur(333px);
+
+  @include desktop {
+    top: 130px;
+    filter: blur(130px);
+  }
+}
+
+.tealBottom {
+  display: none;
+
+  @include desktop {
+    display: block;
+    width: 250px;
+    height: 250px;
+    left: 780px;
+    top: 400px;
+    background: var(--color-primary-teal);
+    filter: blur(150px);
+  }
+}
+
+.landingCircleTop {
+  background-image: url('/images/landing_circle_1.svg');
+  background-size: contain;
+  width: 375px;
+  height: 413px;
+  top: 100px;
+  right: 0;
+
+  @include desktop {
+    top: 0px;
+    height: 663px;
+    width: 769px;
+  }
+}
+
+.landingCircleBottom {
+  background-image: url('/images/landing_circle_2.svg');
+  width: 346px;
+  height: 720px;
+  top: 980px;
+  left: 0;
+
+  @include desktop {
+    transform: rotate(340deg);
+    top: 480px;
+    left: 0px;
+    height: 631px;
+    width: 304px;
+  }
+}
+
+.content {
+  padding: 99px 25px 100px;
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+
+  @include desktop {
+    max-width: 1166px;
+    padding: 164px 25px 104px;
+  }
+}
+
+.firstSection {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 122px;
+
+  @include desktop {
+    flex-direction: row;
+    margin-bottom: 267px;
+  }
+}
+
+.firstSectionWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.landingImage {
+  background-image: url('/images/landing_image.png');
+  height: 400px;
+  position: relative;
+  max-width: 412px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 85px;
+
+  @include desktop {
+    order: 2;
+    height: 505px;
+    margin: 0 0 0 88px;
+  }
+}
+
+.cardLanding {
+  position: absolute;
+  bottom: -69px;
+  left: 0;
+
+  @include tablet-portrait {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @include desktop {
+    left: -40px;
+    bottom: -16px;
+    transform: none;
+  }
+}
+
+.sectionHeader {
+  @include landing-header-mobile;
+  margin-bottom: 24px;
+
+  @include desktop {
+    @include landing-header-desktop;
+  }
+}
+
+.sectionHeaderOne {
+  @include desktop {
+    max-width: 566px;
+  }
+}
+
+.sectionHeaderTwo {
+  @include desktop {
+    @include landing-subheader;
+  }
+}
+
+.paragraph {
+  @include body-2;
+}
+
+.paragraphOne {
+  @include desktop {
+    @include body-1;
+    max-width: 660px;
+  }
+}
+
+.paragraphTwo {
+  @include desktop {
+    @include paragraph-2;
+    max-width: 565px;
+  }
+}
+
+.buttonBidding {
+  margin-top: 24px;
+  width: 192px;
+
+  @include desktop {
+    margin-top: 44px;
+  }
+}
+
+.secondSection {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+.tilesContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 92px;
+
+  @include desktop {
+    flex-direction: row;
+    margin: 30px 0 0 96px;
+  }
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.tileValue {
+  @include body-3;
+}
+
+.tileTitle {
+  @include paragraph-2;
+  margin-top: 16px;
+}
+
+.separator {
+  background-color: var(--color-grey-50);
+  height: 1px;
+  width: 67px;
+  margin: 44px auto;
+
+  @include desktop {
+    height: 67px;
+    margin: auto 44px;
+    width: 1px;
+  }
+}
